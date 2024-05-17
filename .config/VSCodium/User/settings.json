@@ -1,0 +1,40 @@
+{
+  "window.titleBarStyle": "custom",
+  "editor.renderWhitespace": "none",
+  "editor.minimap.renderCharacters": false,
+  "editor.fontSize": 13,
+  "editor.fontFamily": "FiraCode Nerd Font",
+  "terminal.integrated.fontSize": 12,
+  "workbench.productIconTheme": "icons-carbon",
+  "typescript.suggest.paths": false,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true,
+  "gopls": {
+    "ui.semanticTokens": true,
+    "formatting.gofumpt": true
+  },
+  "go.lintTool": "golangci-lint",
+  "go.formatTool": "gofumpt",
+  "workbench.iconTheme": "quill-icons",
+  "workbench.startupEditor": "none",
+  "editor.codeLens": false,
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": "off",
+    "strings": "on"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "go.toolsManagement.autoUpdate": true,
+  "workbench.colorTheme": "poimandres",
+  "editor.bracketPairColorization.enabled": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
