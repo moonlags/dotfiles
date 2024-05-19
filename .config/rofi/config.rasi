@@ -2,13 +2,13 @@ configuration {
         font: "FiraCode Nerd Font 10";
         line-margin: 10;
 
-        display-ssh:    "";
-        display-run:    "";
+        display-ssh:    " ";
+        display-run:    " ";
         display-drun:   " ";
-        display-window: "";
-        display-combi:  "";
+        display-window: " ";
+        display-combi:  " ";
         show-icons:     true;
-/*	modes: "window,drun,run,ssh";*/
+modes: "window,drun,run,ssh,calc";
 /*	font: "mono 12";*/
 /*	location: 0;*/
 /*	yoffset: 0;*/
