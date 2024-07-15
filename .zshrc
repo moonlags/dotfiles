@@ -14,6 +14,7 @@ if [ ! -d "$ZINIT_HOME" ];then
 	git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 fi
 
+export EDITOR=nvim
 source "${ZINIT_HOME}/zinit.zsh"
 
 PROMPT_EOL_MARK=
