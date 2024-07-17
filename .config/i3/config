@@ -55,7 +55,7 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+q exec kitty
 bindsym $mod+f exec firefox
-bindsym Print exec import -window root ss.png
+bindsym Print exec import -window root ss.png & notify-send "Screenshot taken"
 
 # kill focused window
 bindsym $mod+x kill
