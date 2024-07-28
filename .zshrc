@@ -59,6 +59,7 @@ alias ls="ls --color"
 alias vim='nvim'
 alias vi='nvim'
 alias cat='bat'
+alias ssh='kitten ssh'
 
 bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
