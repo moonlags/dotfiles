@@ -16,12 +16,6 @@ for _, lsp in ipairs(servers) do
   }
 end
 
-lspconfig.clangd.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-  on_init = on_init,
-}
-
 -- typescript
 lspconfig.tsserver.setup {
   on_attach = on_attach,

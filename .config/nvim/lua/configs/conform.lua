@@ -4,7 +4,6 @@ local options = {
     go = { "goimports-reviser", "gofumpt" },
     css = { "prettier" },
     html = { "prettier" },
-    cpp = { "clang-format" },
   },
 
   format_on_save = {

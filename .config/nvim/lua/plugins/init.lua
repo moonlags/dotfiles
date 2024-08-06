@@ -8,17 +8,6 @@ return {
     end,
   },
   {
-    "jay-babu/mason-nvim-dap.nvim",
-    event = "VeryLazy",
-    dependencies = {
-      "williamboman/mason.nvim",
-      "mfussenegger/nvim-dap",
-    },
-    opts = {
-      handlers = {},
-    },
-  },
-  {
     "leoluz/nvim-dap-go",
     opts = {},
   },
@@ -79,9 +68,6 @@ return {
         "goimports-reviser",
         "staticcheck",
         "delve",
-        "clangd",
-        "clang-format",
-        "codelldb",
       },
     },
   },
@@ -98,7 +84,6 @@ return {
         "gomod",
         "gosum",
         "gowork",
-        "cpp",
       },
     },
   },
