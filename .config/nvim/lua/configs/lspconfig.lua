@@ -17,10 +17,7 @@ for _, lsp in ipairs(servers) do
 end
 
 lspconfig.clangd.setup {
-  on_attach = function(client, bufnr)
-    client.server_capabilities.signatureHelpProvider = false
-    on_attach(client, bufnr)
-  end,
+  on_attach = on_attach,
   capabilities = capabilities,
   on_init = on_init,
 }
