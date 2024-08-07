@@ -65,7 +65,7 @@ return {
         "prettier",
         "gopls",
         "gofumpt",
-        "goimports-reviser",
+        "goimports",
         "staticcheck",
         "delve",
       },
