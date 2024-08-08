@@ -23,7 +23,7 @@ font pango:JetBrains Mono Nerd Font 10
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec_always killall polybar
 exec --no-startup-id dex --autostart --environment i3
-exec --no-startup-id udiskie -aNs
+exec --no-startup-id udiskie -ans
 exec_always feh --bg-scale ~/.config/wallpapers/storm.jpg
 exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
 exec --no-startup-id picom
