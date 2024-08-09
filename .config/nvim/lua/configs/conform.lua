@@ -4,6 +4,7 @@ local options = {
     go = { "goimports", "gofumpt" },
     css = { "prettier" },
     html = { "prettier" },
+    cpp = { "clang-format" },
   },
 
   format_on_save = {
