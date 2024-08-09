@@ -16,26 +16,6 @@ for _, lsp in ipairs(servers) do
   }
 end
 
-lspconfig.clangd.setup {
-  on_init = on_init,
-  on_attach = on_attach,
-  capabilities = capabilities,
-  cmd = {
-    "clangd",
-    "--background-index",
-    "--clang-tidy",
-    "--header-insertion=iwyu",
-    "--completion-style=detailed",
-    "--function-arg-placeholders",
-    "--fallback-style=llvm",
-  },
-  init_options = {
-    usePlaceholders = false,
-    completeUnimported = true,
-    clangdFileStatus = true,
-  },
-}
-
 -- golang
 lspconfig.gopls.setup {
   on_init = on_init,
