@@ -124,9 +124,8 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-for_window [class="^.*"] border pixel 0
+default_border pixel 0
 
 
 gaps inner 20
@@ -143,6 +142,6 @@ smart_gaps off
 #     inactive_workspace #101014 #1b1e28 #a6accd
 #   }
 # }
-client.focused          #5de4c7 #5de4c7 #FFFFFF #5de4c7   #5de4c7
-client.focused_inactive #1b1e28 #1b1e28 #FFFFFF #1b1e28   #1b1e28
+client.focused          #4c566a #4c566a #FFFFFF #4c566a #4c566a
+client.focused_inactive #3b4252 #3b4252 #FFFFFF #3b4252   #3b4252
 client.unfocused #1b1e28 #1b1e28 #FFFFFF #1b1e28   #1b1e28
