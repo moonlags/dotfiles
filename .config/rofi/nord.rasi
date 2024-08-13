@@ -57,7 +57,7 @@ mainbox {
 }
 
 message {
-    color: #1b1e28;
+    color: @nord0;
     padding: 5;
     border-color: @foreground;
     border:  0px 2px 2px 2px;
@@ -65,13 +65,13 @@ message {
 }
 
 inputbar {
-    color: #a6accd;
+    color: #d8dee9;
     padding: 11px;
-    background-color: #1b1e28;
+    background-color: #2e3440;
 
     border: 1px;
     border-radius:  6px 6px 0px 0px;
-    border-color: #3d59a1;
+    border-color: #434c5e;
 }
 
 entry, prompt, case-indicator {
@@ -86,9 +86,9 @@ prompt {
 listview {
     padding: 8px;
     border-radius: 0px 0px 6px 6px;
-    border-color: #3d59a1;
+    border-color: #434c5e;
     border: 0px 1px 1px 1px;
-    background-color: #1b1e28;
+    background-color: #2e3440;
     dynamic: false;
 }
 
@@ -97,13 +97,13 @@ element {
     vertical-align: 0.5;
     border-radius: 4px;
     background-color: transparent;
-    color: #a6accd;
-    text-color: #a6accd;
+    color: #d8dee9;
+    text-color: #d8dee9;
 }
 
 element selected.normal {
-	background-color: #add7ff;
-	text-color: #1b1e28;
+	background-color: #d8dee9;
+	text-color: #2e3440;
 }
 
 element-text, element-icon {
