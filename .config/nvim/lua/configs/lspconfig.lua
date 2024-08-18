@@ -30,6 +30,7 @@ lspconfig.clangd.setup {
     "--fallback-style=llvm",
   },
   init_options = {
+    usePlaceholders = false,
     completeUnimported = true,
     clangdFileStatus = true,
   },
