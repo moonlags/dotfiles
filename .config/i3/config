@@ -70,11 +70,21 @@ bindsym $mod+x kill
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 bindsym $mod+space exec rofi -show drun 
 
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
+
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -143,6 +153,6 @@ smart_gaps off
 #     inactive_workspace #101014 #1b1e28 #a6accd
 #   }
 # }
-client.focused          #4c566a #4c566a #FFFFFF #4c566a #4c566a
-client.focused_inactive #1b1e28 #1b1e28 #FFFFFF #1b1e28   #1b1e28
-client.unfocused #1b1e28 #1b1e28 #FFFFFF #1b1e28   #1b1e28
+# client.focused          #4c566a #4c566a #FFFFFF #4c566a #4c566a
+# client.focused_inactive #1b1e28 #1b1e28 #FFFFFF #1b1e28   #1b1e28
+# client.unfocused #1b1e28 #1b1e28 #FFFFFF #1b1e28   #1b1e28
