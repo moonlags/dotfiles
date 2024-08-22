@@ -58,6 +58,8 @@ bindsym $mod+q exec kitty
 bindsym $mod+f exec firefox
 bindsym $mod+Print exec maim -s | xclip -selection clipboard -t "image/png"
 bindsym Print exec maim | xclip -selection clipboard -t "image/png"
+bindsym $mod+e exec yazi /home/moonlags/
+bindsym $mod+Control+Delete exec "rofi -show menu -modi 'menu:~/.config/rofi/scripts/rofi-power-menu --choices=shutdown/reboot/suspend/logout' -config ~/.config/rofi/power.rasi
 
 # kill focused window
 bindsym $mod+x kill

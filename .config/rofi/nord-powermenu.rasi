@@ -1,0 +1,103 @@
+* {
+  	bg-col: #2e3440;
+  	bg-col-light: #2e3440;
+  	border-col: #2e3440;
+  	selected-col: #2e3440;
+  	fg-col: #d8dee9;
+    fg-col2:#81a1c1;
+    grey:#4c566a;
+    blue: #5e81ac;
+
+    font: "JetBrains Mono Nerd Font 10";
+}
+
+window {
+	location: east;
+	anchor: east;
+	width: 90;
+	x-offset: -25px;
+	background-color: @bg-col;
+	border: 4px solid;
+	border-radius: 12;
+	border-color: #4c566a;
+}
+
+mainbox {
+	spacing: 15px;
+	padding: 15px;
+	background-color: transparent;
+	children: ["listview"];
+}
+
+listview {
+	columns: 1;
+	lines: 4;
+	cycle: false;
+	dynamic: true;
+	scrollbar: false;
+	layout: vertical;
+	spacing: 15px;
+	background-color: transparent;
+	border: 0px solid;
+}
+
+element {
+	background-color: inherit;
+	text-color: @fg-col;
+	padding: 5px;
+	border-radius: 10px;
+}
+
+element-text {
+	background-color: inherit;
+	text-color: inherit;
+	font: "JetBrains Mono Nerd Font 18";
+	align-items: center;
+	vertical-align: 0.5;
+	horizontal-align: 0.5;
+}
+
+element.normal.normal {
+	background-color: transparent;
+	text-color: @fg-col;
+}
+
+element.normal.urgent {
+	background-color: transparent;
+	text-color: @fg-col;
+}
+
+element.normal.active {
+	background-color: transparent;
+	text-color: @fg-col;
+}
+
+element.selected.normal {
+	background-color: #4c566a;
+	text-color: @fg-col;
+}
+
+element.selected.urgent {
+	background-color: #4c566a;
+	text-color: @fg-col;
+}
+
+element.selected.active {
+	background-color: #4c566a;
+	text-color: @fg-col;
+}
+
+element.alternate.normal {
+	background-color: transparent;
+	text-color: @fg-col;
+}
+
+element.alternate.urgent {
+	background-color: transparent;
+	text-color: @fg-col;
+}
+
+element.alternate.active {
+	background-color: transparent;
+	text-color: @fg-col;
+}
