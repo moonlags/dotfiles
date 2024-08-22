@@ -1,9 +1,9 @@
 [global]
 frame_color = "#4c566ab0"
 separator_color= frame
-scale = 1.2
+scale = 1 
 icon_corner_radius = 5
-font = "JetBrains Mono Nerd Font 12"
+font = "JetBrains Mono Nerd Font 11"
 origin = top-center
 offset = 0
 frame_width = 4
