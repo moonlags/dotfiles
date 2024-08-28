@@ -1,24 +1,24 @@
 [global]
-frame_color = "#4c566ab0"
+frame_color = "#4c566a"
 separator_color= frame
 scale = 1 
 icon_corner_radius = 5
-font = "JetBrains Mono Nerd Font 11"
-origin = top-center
+font = "JetBrains Mono Nerd Font 10"
+origin = top-right
 offset = 0
-frame_width = 4
+frame_width = 3
 corners = all
 corner_radius = 10
 
 [urgency_low]
-background = "#2e3440b0"
+background = "#2e3440"
 foreground = "#d8dee9"
 
 [urgency_normal]
-background = "#2e3440b0"
+background = "#2e3440"
 foreground = "#d8dee9"
 
 [urgency_critical]
-background = "#2e3440b0"
+background = "#2e3440"
 foreground = "#d8dee9"
-frame_color = "#d08770b0"
+frame_color = "#d08770"
