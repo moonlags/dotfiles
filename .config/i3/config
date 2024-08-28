@@ -56,6 +56,8 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+q exec kitty
 bindsym $mod+f exec firefox
+bindsym $mod+t exec telegram-desktop
+bindsym $mod+o exec obsidian
 bindsym $mod+Print exec maim -s | xclip -selection clipboard -t "image/png"
 bindsym Print exec maim | xclip -selection clipboard -t "image/png"
 bindsym $mod+Control+Delete exec "rofi -show menu -modi 'menu:~/.config/rofi/scripts/rofi-power-menu --choices=shutdown/reboot/suspend' -config ~/.config/rofi/power.rasi"
