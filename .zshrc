@@ -58,11 +58,10 @@ alias vim='nvim'
 alias vi='nvim'
 alias cat='bat'
 alias ssh='kitten ssh'
+alias gcc='clang'
 
 bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
-
-eval $(keychain -q --noask --eval id_ed25519)
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

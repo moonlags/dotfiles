@@ -2,9 +2,8 @@ local options = {
   formatters_by_ft = {
     lua = { "stylua" },
     go = { "goimports", "gofumpt" },
-    css = { "prettier" },
-    html = { "prettier" },
     c = { "clang-format" },
+    templ = { "templ" },
   },
 
   format_on_save = {
