@@ -2,7 +2,7 @@ local options = {
   formatters_by_ft = {
     lua = { "stylua" },
     go = { "goimports", "gofumpt" },
-    cpp = { "clang-format" },
+    c = { "clang-format" },
   },
 
   format_on_save = {

@@ -39,9 +39,8 @@
       "spacing": 10
   },
   "clock": {
-      // "timezone": "America/New_York",
-      "format": "󰣇 {:%I:%M}",
-      "format-alt": "{:%A  |  %I:%M  | %e %B}",
+      "timezone": "Europe/Riga",
+      "format": "{:%A  |  %I:%M  | %e %B}",
       "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
   "cpu": {

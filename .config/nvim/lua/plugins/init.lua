@@ -69,7 +69,7 @@ return {
         "gomod",
         "gosum",
         "gowork",
-        "cpp",
+        "c",
       },
     },
   },
