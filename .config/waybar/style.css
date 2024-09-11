@@ -1,182 +1,202 @@
+@define-color border #4c566a; 
+@define-color foreg #d8dee9;
+@define-color backg #2e3440;
+
 * {
-    border: none;
-    border-radius: 0px;
-    font-family: "FiraCode Nerd Font";
-    font-weight: bold;
-    font-size: 11px;
-    min-height: 10px;
+  border: none;
+  border-radius: 0px;
+  /* `otf-font-awesome` is required to be installed for icons */
+  /* font-family: 'NotoSans Nerd Font', FontAwesome, Roboto, Helvetica, Arial, sans-serif; */
+  font-family: "Jetbrains Mono Nerd Font";
+  font-size: 11px;
+  font-weight: bold;
+  min-height: 0;
+  transition: 0.1s;
 }
 
-@import "./nord.css";
-
 window#waybar {
-    background: @bar-bg;
+  background-color: transparent;
+  color: @foreg;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+window#waybar.empty #window {
+  background-color: transparent;
+  border-color: transparent;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 tooltip {
-    background: @main-bg;
-    color: @main-fg;
-    border-radius: 7px;
-    border-width: 0px;
+  background: @backg;
+  color: @foreg;
+  border-radius: 10px;
+  border-width: 1.5px;
+  border-style: solid;
+  border-color: @border;
+  opacity: 1;
 }
 
 #workspaces button {
-    box-shadow: none;
-	text-shadow: none;
-    padding: 0px;
-    border-radius: 9px;
-    margin-top: 3px;
-    margin-bottom: 3px;
-    padding-left: 3px;
-    padding-right: 3px;
-    color: @main-fg;
-    animation: gradient_f 20s ease-in infinite;
-    transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
+  color: #434c5e;
+  border-radius: 8px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  padding: 0px 5px 0px 5px;
+  margin-left: 3px;
+  margin-right: 3px;
+  transition: 0.3s;
 }
 
 #workspaces button.active {
-    background: @wb-act-bg;
-    color: @wb-act-fg;
-    margin-left: 3px;
-    padding-left: 12px;
-    padding-right: 12px;
-    margin-right: 3px;
-    animation: gradient_f 20s ease-in infinite;
-    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+  color: @foreg;
+  background: #3b4252;
+  border-radius: 8px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  padding: 0px 15px 0px 15px;
 }
 
-#workspaces button:hover {
-    background: @wb-hvr-bg;
-    color: @wb-hvr-fg;
-    padding-left: 3px;
-    padding-right: 3px;
-    animation: gradient_f 20s ease-in infinite;
-    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+#workspaces button:hover{
+  color: @backg;
+  background: @foreg;
 }
 
-#taskbar button {
-    box-shadow: none;
-	text-shadow: none;
-    padding: 0px;
-    border-radius: 9px;
-    margin-top: 3px;
-    margin-bottom: 3px;
-    padding-left: 3px;
-    padding-right: 3px;
-    color: @wb-color;
-    animation: gradient_f 20s ease-in infinite;
-    transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
+#workspaces button.empty {
+  background-color: transparent;
+  border-color: transparent;
 }
 
-#taskbar button.active {
-    background: @wb-act-bg;
-    color: @wb-act-color;
-    margin-left: 3px;
-    padding-left: 12px;
-    padding-right: 12px;
-    margin-right: 3px;
-    animation: gradient_f 20s ease-in infinite;
-    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
-}
-
-#custom-tomato {
-  color: #1b1e28;
-  background: #fcc5e9;
-  opacity: 1;
-  margin: 3px 12px 3px 12px;
-  padding: 0;
-  padding-left: 12px;
-  padding-right: 12px;
-  box-shadow:none;
-  text-shadow:none;
-  border-radius: 21px;
-  animation: gradient_f 20s ease-in infinite;
-  transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
-}
-
-#taskbar button:hover {
-    background: @wb-hvr-bg;
-    color: @wb-hvr-color;
-    padding-left: 3px;
-    padding-right: 3px;
-    animation: gradient_f 20s ease-in infinite;
-    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
-}
-
-#backlight,
-#battery,
-#bluetooth,
-#custom-cliphist,
-#clock,
-#cpu,
-#custom-gpuinfo,
-#idle_inhibitor,
 #language,
+#cpu,
 #memory,
-#custom-mode,
-#mpris,
-#network,
-#custom-power,
-#pulseaudio,
-#custom-spotify,
-#taskbar,
-#tray,
-#custom-updates,
-#custom-wallchange,
-#custom-wbar,
+#custom-power_profile,
+#custom-weather,
+#custom-vpn,
 #window,
+#clock,
+#battery,
+#pulseaudio,
+#network,
+#bluetooth,
+#temperature,
 #workspaces,
-#custom-l_end,
-#custom-r_end,
-#custom-sl_end,
-#custom-sr_end,
-#custom-rl_end,
-#custom-rr_end {
-    color: @main-fg;
-    background: @main-bg;
-    opacity: 1;
-    margin: 4px 0px 4px 0px;
-    padding-left: 4px;
-    padding-right: 4px;
+#tray,
+#backlight {
+  background: @backg;
+  opacity: 1;
+  padding: 0px 10px;
+  margin: 0;
+  margin-top: 5px;
 }
 
-#workspaces,
-#taskbar {
-    padding: 0px;
+#cpu {
+  color: @foreg;
+  padding-left: 10px;
+  border-bottom: 2px solid @border;
+  border-top: 2px solid @border;
 }
 
-#custom-r_end {
-    border-radius: 0px 21px 21px 0px;
-    margin-right: 9px;
-    padding-right: 3px;
+#memory {
+  border-radius: 0px 12px 12px 0px;
+  margin-right: 20px;
+  color: @foreg;
+  padding-left: 10px;
+  padding-right: 15px;
+  border-right: 2px solid @border;
+  border-top: 2px solid @border;
+  border-bottom: 2px solid @border;
 }
 
-#custom-l_end {
-    border-radius: 21px 0px 0px 21px;
-    margin-left: 9px;
-    padding-left: 3px;
+#language {
+  color: @foreg;
+  border-radius: 12px 0px 0px 12px;
+  padding-left: 15px;
+  border-left: 2px solid @border;
+  border-top: 2px solid @border;
+  border-bottom: 2px solid @border;
 }
 
-#custom-sr_end {
-    border-radius: 0px;
-    margin-right: 9px;
-    padding-right: 3px;
+#tray {
+  border-radius: 12px;
+  margin-left: 15px;
+/*    padding: 0px 4px; */
+  padding-left: 15px;
+  padding-right: 15px;
+  border: 2px solid @border;
 }
 
-#custom-sl_end {
-    border-radius: 0px;
-    margin-left: 9px;
-    padding-left: 3px;
+#tray.empty {
+  background-color: transparent;
+  border-color: transparent;
+  border: 0px;
 }
 
-#custom-rr_end {
-    border-radius: 0px 7px 7px 0px;
-    margin-right: 9px;
-    padding-right: 3px;
+#workspaces {
+  border-radius: 12px;
+  margin-left: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border: 2px solid @border;
 }
 
-#custom-rl_end {
-    border-radius: 7px 0px 0px 7px;
-    margin-left: 9px;
-    padding-left: 3px;
+#custom-power_profile {
+  color: #a6e3a1;
+  border-left: 0px;
+  border-right: 0px;
 }
+
+#window {
+  border-radius: 12px;
+  margin-left: 20px;
+  margin-right: 5px;
+  border: 2px solid @border;
+}
+
+#clock {
+  color: @foreg;
+  border-radius: 12px;
+  margin-left: 5px;
+  border-right: 0px;
+  transition: 0.3s;
+  padding-right: 13px;
+  padding-left: 13px;
+  border: 2px solid @border;
+}
+
+#network {
+  color: @foreg;
+  padding-left: 10px;
+  border-top: 2px solid @border;
+  border-bottom: 2px solid @border;
+}
+
+#network.disconnected {
+  color: #f5c2e7;
+  border-top: 2px solid @border;
+  border-bottom: 2px solid @border;
+}
+
+#pulseaudio {
+  color: @foreg;
+  border-left: 0px;
+  border-top: 2px solid @border;
+  border-bottom: 2px solid @border;
+  padding-right: 10px;
+}
+
+#pulseaudio.microphone {
+  color: #b4befe;
+  border-radius: 20px 0px 0px 20px;
+  border-left: 2px solid #89b4fa;
+  border-top: 2px solid #89b4fa;
+  border-right: 0px;
+  border-bottom: 2px solid #89b4fa;
+  padding-left: 15px;
+}
+
+#pulseaudio.muted {
+  color: #f38ba8;
+}
+

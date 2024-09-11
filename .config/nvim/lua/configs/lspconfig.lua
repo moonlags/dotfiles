@@ -7,7 +7,7 @@ local util = require "lspconfig/util"
 lspconfig.clangd.setup {
   on_attach = on_attach,
   capabilities = capabilities,
-  filetypes = { "c" },
+  filetypes = { "cpp" },
   cmd = {
     "clangd",
     "--clang-tidy",
@@ -21,32 +21,6 @@ lspconfig.clangd.setup {
     clangdFileStatus = true,
   },
 }
-
-lspconfig.templ.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-  filetypes = { "templ" },
-}
-
-lspconfig.html.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-  filetypes = { "templ" },
-}
-
-lspconfig.htmx.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-  filetypes = { "templ" },
-}
-
-lspconfig.tailwindcss.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-  filetypes = { "templ" },
-  init_options = { userLanguages = { templ = "html" } },
-}
-
 -- golang
 lspconfig.gopls.setup {
   on_attach = on_attach,

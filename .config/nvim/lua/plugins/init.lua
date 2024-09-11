@@ -54,13 +54,8 @@ return {
         "clangd",
         "clang-format",
         "codelldb",
-        "templ",
-        "tailwindcss",
       },
     },
-  },
-  {
-    "joerdav/templ.vim",
   },
   {
     "nvim-treesitter/nvim-treesitter",
@@ -74,8 +69,7 @@ return {
         "gomod",
         "gosum",
         "gowork",
-        "c",
-        "templ",
+        "cpp",
       },
     },
   },
