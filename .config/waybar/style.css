@@ -63,11 +63,6 @@ tooltip {
   background: @foreg;
 }
 
-#workspaces button.empty {
-  background-color: transparent;
-  border-color: transparent;
-}
-
 #language,
 #cpu,
 #memory,

@@ -1,15 +1,9 @@
 local options = {
   formatters_by_ft = {
     lua = { "stylua" },
-    go = { "goimports", "gofumpt" },
-    c = { "clang-format" },
-  },
-
-  format_on_save = {
-    -- These options will be passed to conform.format()
-    timeout_ms = 500,
-    lsp_fallback = true,
+    css = { "prettier" },
+    html = { "prettier" },
   },
 }
 
-require("conform").setup(options)
+return options
