@@ -3,7 +3,6 @@ local options = {
     lua = { "stylua" },
     css = { "prettier" },
     html = { "prettier" },
-    rust = { "rustfmt" },
     go = { "goimports", "gofumpt" },
     c = { "clang-format" },
   },

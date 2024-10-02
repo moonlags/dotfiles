@@ -12,7 +12,6 @@ return {
       "gosum",
       "gowork",
       "c",
-      "rust",
     },
   },
 }
