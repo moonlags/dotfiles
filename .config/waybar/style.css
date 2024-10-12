@@ -1,4 +1,4 @@
-@define-color border #4c566a; 
+@define-color border #4c566a;
 @define-color foreg #d8dee9;
 @define-color backg #2e3440;
 
@@ -58,7 +58,7 @@ tooltip {
   padding: 0px 15px 0px 15px;
 }
 
-#workspaces button:hover{
+#workspaces button:hover {
   color: @backg;
   background: @foreg;
 }
@@ -116,7 +116,7 @@ tooltip {
 #tray {
   border-radius: 12px;
   margin-left: 15px;
-/*    padding: 0px 4px; */
+  /*    padding: 0px 4px; */
   padding-left: 15px;
   padding-right: 15px;
   border: 2px solid @border;
@@ -194,4 +194,3 @@ tooltip {
 #pulseaudio.muted {
   color: #f38ba8;
 }
-
