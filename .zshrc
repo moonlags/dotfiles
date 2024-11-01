@@ -26,10 +26,6 @@ zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
 
-zinit snippet OMZP::git
-zinit snippet OMZP::sudo
-zinit snippet OMZP::command-not-found
-
 autoload -Uz compinit && compinit
 
 zinit cdreplay -q
@@ -53,12 +49,20 @@ zstyle ':fzf-tab:complete:cd:*' fzf=preview 'ls --color $realpath'
 
 eval "$(fzf --zsh)"
 
+alias c='clear'
 alias ls="ls --color"
-alias vim='nvim'
-alias vi='nvim'
-alias cat='bat'
+alias un='yay -Rns' # uninstall package
+alias up='yay -Syu' # update system/package/aur
+alias pc='yay -Sc' # remove unused cache
+alias po='yay -Qtdq | yay -Rns -' 
+
 alias ssh='kitten ssh'
 alias gcc='clang'
+
+alias ..='cd ..'
+alias ...='cd ../..'
+
+alias mkdir='mkdir -p'
 
 bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward

@@ -10,4 +10,3 @@ configuration {
     sidebar-mode: false; 
 }
 @theme "~/.config/rofi/nord.rasi"
-
