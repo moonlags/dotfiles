@@ -4,7 +4,7 @@
 // sourced from header module //
 
     "layer": "top",
-    "position": "top",
+    "position": "bottom",
     "mod": "dock",
     "height": 31,
     "exclusive": true,
@@ -15,12 +15,31 @@
 
 // positions generated based on config.ctl //
 
-	"modules-left": ["custom/padd","custom/l_end","hyprland/workspaces","custom/r_end","custom/l_end","wlr/taskbar","custom/r_end","custom/padd"],
-	"modules-center": ["custom/padd","custom/l_end","clock","custom/r_end","custom/padd"],
-	"modules-right": ["custom/padd","custom/l_end","tray","custom/r_end","custom/l_end","network","pulseaudio","custom/r_end","custom/padd"],
+	"modules-left": ["custom/padd","custom/l_end","hyprland/workspaces","custom/r_end","custom/l_end","idle_inhibitor","clock","custom/spotify","custom/r_end","custom/padd"],
+	"modules-center": ["custom/padd","custom/l_end","wlr/taskbar","custom/r_end","custom/padd"],
+	"modules-right": ["custom/padd","custom/l_end","tray","custom/r_end","custom/l_end","hyprland/language","network","pulseaudio","pulseaudio#microphone","custom/r_end","custom/padd"],
 
 
 // sourced from modules based on config.ctl //
+"custom/cava": {
+	"format": "{}",
+	"exec": "~/.config/bin/waybar_cava.sh",
+	"restart-interval": 1,
+	"hide-empty": true
+},
+
+ "custom/spotify": {
+        "exec": "~/.config/bin/mediaplayer.py --player spotify",
+        "format": " {}",
+        "rotate": 0,
+        "return-type": "json",
+        "on-click": "playerctl play-pause --player spotify",
+        "on-click-right": "playerctl next --player spotify",
+        "on-click-middle": "playerctl previous --player spotify",
+        "max-length": 25,
+        "escape": true,
+        "tooltip": true
+    },
 
 	"wlr/taskbar": {
 		"format": "{icon}",
@@ -31,9 +50,7 @@
 		"tooltip-format": "{title}",
 		"on-click": "activate",
 		"on-click-middle": "close",
-		"ignore-list": [
-			"kitty"
-		],
+		"ignore-list": [],
 		"app_ids-mapping": {
 			"firefoxdeveloperedition": "firefox-developer-edition"
 		}
@@ -49,7 +66,7 @@
     },
 
     "clock": {
-        "format": "{:%I:%M %p}",
+        "format": "{:%H:%M}",
         "rotate": 0,
         "format-alt": "{:%R 󰃭 %d·%m·%y}",
         "tooltip-format": "<span>{calendar}</span>",
@@ -107,7 +124,7 @@
         "tooltip": true,
         "format-wifi": " ",
         "rotate": 0,
-        "format-ethernet": "󰈀 ",
+        "format-ethernet": " ",
         "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
         "format-linked": "󰈀 {ifname} (No IP)",
         "format-disconnected": "󰖪 ",
@@ -119,11 +136,11 @@
     "pulseaudio": {
         "format": "{icon} {volume}",
         "rotate": 0,
-        "format-muted": "󰖁",
+        "format-muted": " ",
         "on-click": "pavucontrol -t 3",
-        "on-click-middle": "volumecontrol.sh -o m",
-        "on-scroll-up": "volumecontrol.sh -o i",
-        "on-scroll-down": "volumecontrol.sh -o d",
+        "on-click-middle": "pamixer -t",
+        "on-scroll-up": "pamixer -i 1",
+        "on-scroll-down": "pamixer -d 1",
         "tooltip-format": "{icon} {desc} // {volume}%",
         "scroll-step": 5,
         "format-icons": {
@@ -135,6 +152,17 @@
             "car": "",
             "default": ["", " ", " "]
         }
+    },
+
+    "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "rotate": 0,
+        "format-source": "",
+        "format-source-muted": " ",
+        "on-click": "pavucontrol -t 4",
+        "on-click-middle": "pactl set-source-mute 0 toggle",
+        "tooltip-format": "{format_source} {source_desc} // {source_volume}%",
+        "scroll-step": 5
     },
 
 // modules for padding //
