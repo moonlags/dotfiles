@@ -57,7 +57,6 @@ alias pc='yay -Sc' # remove unused cache
 alias po='yay -Qtdq | yay -Rns -' 
 
 alias ssh='kitten ssh'
-alias gcc='clang'
 
 alias ..='cd ..'
 alias ...='cd ../..'

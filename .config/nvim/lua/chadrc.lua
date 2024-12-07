@@ -30,6 +30,8 @@ M.mason = {
     "clangd",
     "clang-format",
     "codelldb",
+    "rust-analyzer",
+    "rustfmt",
   },
 }
 
