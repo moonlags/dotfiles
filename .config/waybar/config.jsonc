@@ -17,9 +17,15 @@
 
 	"modules-left": ["custom/padd","custom/l_end","hyprland/workspaces","custom/r_end","custom/l_end","idle_inhibitor","clock","custom/spotify","custom/r_end","custom/padd"],
 	"modules-center": ["custom/padd","custom/l_end","wlr/taskbar","custom/r_end","custom/padd"],
-	"modules-right": ["custom/padd","custom/l_end","tray","custom/r_end","custom/l_end","hyprland/language","network","pulseaudio","pulseaudio#microphone","custom/r_end","custom/padd"],
+	"modules-right": ["custom/padd","custom/tomato","custom/l_end","tray","custom/r_end","custom/l_end","hyprland/language","network","pulseaudio","pulseaudio#microphone","custom/r_end","custom/padd"],
 
 
+
+  "custom/tomato":{
+    "interval":1,
+    "format": "{}",
+    "exec":"tomato -t"
+  },
 // sourced from modules based on config.ctl //
 "custom/cava": {
 	"format": "{}",
@@ -29,7 +35,7 @@
 },
 
  "custom/spotify": {
-        "exec": "~/.config/bin/mediaplayer.py --player spotify",
+        "exec": "./scripts/mediaplayer.py --player spotify",
         "format": " {}",
         "rotate": 0,
         "return-type": "json",

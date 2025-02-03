@@ -56,6 +56,10 @@ alias up='yay -Syu' # update system/package/aur
 alias pc='yay -Sc' # remove unused cache
 alias po='yay -Qtdq | yay -Rns -' 
 
+upload() {
+  echo "$(curl -Ffile=@$1 https://0x0.st)"
+}
+
 alias ssh='kitten ssh'
 
 alias ..='cd ..'

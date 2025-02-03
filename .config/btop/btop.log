@@ -40,3 +40,6 @@
 
 2024/11/01 (22:46:41) | ===> btop++ v.1.4.0
 2024/11/01 (22:46:41) | WARNING: NVML: Failed to get GPU power usage: Not Supported
+
+2025/02/03 (20:11:48) | ===> btop++ v.1.4.0
+2025/02/03 (20:11:48) | WARNING: NVML: Failed to get GPU power usage: Not Supported

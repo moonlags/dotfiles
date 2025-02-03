@@ -140,6 +140,16 @@ tooltip {
   padding: 0px;
 }
 
+#custom-tomato {
+  color: #2e3440;
+  background: #81a1c1;
+  opacity: 1;
+  margin: 4px 9px 4px 9px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 21px;
+}
+
 #custom-r_end {
   border-radius: 0px 21px 21px 0px;
   margin-right: 9px;
