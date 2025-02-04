@@ -35,13 +35,12 @@
 },
 
  "custom/spotify": {
-        "exec": "~/.config/waybar/scripts/mediaplayer.py --player firefox",
-        "format": " {}",
-        "rotate": 0,
-        "return-type": "json",
-        "on-click": "playerctl play-pause --player spotify",
-        "on-click-right": "playerctl next --player spotify",
-        "on-click-middle": "playerctl previous --player spotify",
+        "exec": "~/.config/waybar/scripts/mediaplayer.sh --player firefox --url soundcloud",
+        "format": "{}",
+        "interval":1,
+        "on-click": "playerctl play-pause --player firefox",
+        "on-click-right": "playerctl next --player firefox",
+        "on-click-middle": "playerctl previous --player firefox",
         "max-length": 25,
         "escape": true,
         "tooltip": true
