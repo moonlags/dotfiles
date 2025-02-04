@@ -35,7 +35,7 @@
 },
 
  "custom/spotify": {
-        "exec": "./scripts/mediaplayer.py --player spotify",
+        "exec": "~/.config/waybar/scripts/mediaplayer.py --player firefox",
         "format": " {}",
         "rotate": 0,
         "return-type": "json",
