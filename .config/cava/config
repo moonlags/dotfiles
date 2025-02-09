@@ -13,7 +13,7 @@
 # 'autosens' will attempt to decrease sensitivity if the bars peak. 1 = on, 0 = off
 # new as of 0.6.0 autosens of low values (dynamic range)
 # 'overshoot' allows bars to overshoot (in % of terminal height) without initiating autosens. DEPRECATED as of 0.6.0
-; autosens = 1
+autosens = 1
 ; overshoot = 20
 
 # Manual sensitivity in %. If autosens is enabled, this will only be the initial value.
@@ -155,7 +155,7 @@
 # 'mono' outputs left to right lowest to highest frequencies.
 # 'mono_option' set mono to either take input from 'left', 'right' or 'average'.
 # set 'reverse' to 1 to display frequencies the other way around.
-; channels = stereo
+channels = mono 
 ; mono_option = average
 ; reverse = 0
 
@@ -233,9 +233,9 @@ gradient_color_1 = '#2e3440'
 gradient_color_2 = '#3b4252'
 gradient_color_3 = '#434c5e'
 gradient_color_4 = '#4c566a'
-gradient_color_5 = '#d8dee9'
-gradient_color_6 = '#e5e9f0'
-gradient_color_7 = '#eceff4'
+; gradient_color_5 = '#d8dee9'
+; gradient_color_6 = '#e5e9f0'
+; gradient_color_7 = '#eceff4'
 ; gradient_color_8 = '#cc3333'
 
 
