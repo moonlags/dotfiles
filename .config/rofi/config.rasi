@@ -5,8 +5,8 @@ configuration {
     drun-display-format: "{icon} {name}";
     location: 0;
     disable-history: false;
-    hide-scrollbar: false;
-    display-drun: "    Run  ";
-    sidebar-mode: false; 
+    hide-scrollbar: true;
+    display-run: "";
+    display-drun: "";
 }
-@theme "~/.config/rofi/nord.rasi"
+@theme "~/.config/rofi/theme.rasi"

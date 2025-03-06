@@ -31,6 +31,13 @@ return { -- Collection of various small independent plugins/modules
       return '%2l:%-2v'
     end
 
+    local hues = require 'mini.hues'
+    hues.setup {
+      background = '#101010',
+      foreground = '#f7f7f7',
+      n_hues = 8,
+      saturation = 'lowmedium',
+    }
     -- ... and there is more!
     --  Check out: https://github.com/echasnovski/mini.nvim
   end,

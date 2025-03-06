@@ -1,24 +1,30 @@
 [global]
-frame_color = "#4c566a"
-separator_color= frame
-scale = 1 
-icon_corner_radius = 5
-font = "JetBrains Mono Nerd Font 10"
-origin = top-right
-offset = 0
-frame_width = 3
-corners = all
-corner_radius = 10
+    monitor = 1
+
+    origin = top-right
+
+    width = 400
+    offset = 15x15
+    
+    progress_bar = true
+    progress_bar_min_width = 380
+    progress_bar_max_width = 380
+    progress_bar_corner_radius = 10
+
+    padding = 20
+    horizontal_padding = 20
+    frame_width = 1
+    gap_size = 3
+    font = "Jetbrains Mono Nerd 10"
+
+    background = "#101010"
+    foreground = "#f7f7f7"
 
 [urgency_low]
-background = "#2e3440"
-foreground = "#d8dee9"
+    frame_color = "#a0a0a0"
 
 [urgency_normal]
-background = "#2e3440"
-foreground = "#d8dee9"
+    frame_color = "#a0a0a0"
 
 [urgency_critical]
-background = "#2e3440"
-foreground = "#d8dee9"
-frame_color = "#d08770"
+    frame_color = "#a0a0a0"

@@ -20,6 +20,7 @@ require('lazy').setup({
   require 'kickstart.plugins.which-key',
   require 'kickstart.plugins.telescope',
   require 'kickstart.plugins.lsp',
+  -- require 'kickstart.plugins.lint',
   require 'kickstart.plugins.conform',
   require 'kickstart.plugins.nvim-cmp',
   require 'kickstart.plugins.theme',
@@ -30,8 +31,6 @@ require('lazy').setup({
   require 'kickstart.plugins.autopairs',
   require 'kickstart.plugins.oil',
   require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
-
-  { import = 'custom.plugins' },
 }, {
   ui = {
     icons = {},
