@@ -32,7 +32,9 @@ return { -- Autoformat
     end,
     formatters_by_ft = {
       lua = { 'stylua' },
-      zig = { 'zigfmt' },
+      go = { 'goimports', 'gofumpt' },
+      c = { 'clang-format' },
+      -- zig = { 'zigfmt' },
       -- Conform can also run multiple formatters sequentially
       -- python = { "isort", "black" },
       --

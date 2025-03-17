@@ -20,7 +20,7 @@ require('lazy').setup({
   require 'kickstart.plugins.which-key',
   require 'kickstart.plugins.telescope',
   require 'kickstart.plugins.lsp',
-  -- require 'kickstart.plugins.lint',
+  require 'kickstart.plugins.lint',
   require 'kickstart.plugins.conform',
   require 'kickstart.plugins.nvim-cmp',
   require 'kickstart.plugins.theme',
