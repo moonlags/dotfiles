@@ -1,11 +1,11 @@
 # dotfiles
 
-simple black rice i3
+simple black rice for i3
 
 ### showcases 
-these arent valid! (im sorry)
 ![showcase1](./showcases/showcase1.png)
 ![showcase2](./showcases/showcase2.png)
+![showcase3](./showcases/showcase3.png)
 
 ### packages
 ```bash
