@@ -1,0 +1,30 @@
+[global]
+    monitor = 1
+
+    origin = top-right
+
+    width = 400
+    offset = 15x15
+    
+    progress_bar = true
+    progress_bar_min_width = 380
+    progress_bar_max_width = 380
+    progress_bar_corner_radius = 10
+
+    padding = 20
+    horizontal_padding = 20
+    frame_width = 1
+    gap_size = 3
+    font = "Jetbrains Mono Nerd 10"
+
+    background = "#101010"
+    foreground = "#f7f7f7"
+
+[urgency_low]
+    frame_color = "#a0a0a0"
+
+[urgency_normal]
+    frame_color = "#a0a0a0"
+
+[urgency_critical]
+    frame_color = "#a0a0a0"
