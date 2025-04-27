@@ -18,10 +18,7 @@ exec_always --no-startup-id setxkbmap us,ru -option 'grp:alt_shift_toggle,caps:c
 exec_always --no-startup-id ~/.config/polybar/launch.sh 
 exec --no-startup-id redshift -l 56.9:24.1
 
-set $gnome-schema org.gnome.desktop.interface
-exec_always --no-startup-id gsettings set $gnome-schema cursor-theme 'Bibata-Original-Classic'
-exec_always --no-startup-id gsettings set $gnome-schema cursor-size 24
-exec_always --no-startup-id gsettings set $gnome-schema color-theme "prefer-dark"
+exec_always --no-startup-id gsettings set org.gnome.desktop.interface color-theme "prefer-dark"
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%
@@ -34,11 +31,11 @@ focus_follows_mouse no
 
 # start a terminal
 bindsym $mod+q exec kitty
-bindsym $mod+space exec rofi -show drun 
-bindsym $mod+p exec maim -s | xclip -selection clipboard -t "image/png"
+bindsym $mod+d exec rofi -show drun 
+bindsym $mod+p exec --no-startup-id maim -s | xclip -selection clipboard -t "image/png"
 bindsym $mod+x kill
-bindsym $mod+m exec betterlockscreen -l
-bindsym $mod+Shift+b ~/.config/polybar/launch.sh
+bindsym $mod+m exec --no-startup-id betterlockscreen -l
+bindsym $mod+Shift+b exec --no-startup-id ~/.config/polybar/launch.sh
 
 
 bindsym $mod+h focus left
