@@ -1,3 +1,0 @@
-#!/bin/bash
-
-exec startx & dbus-run-session i3 "$@" 
