@@ -53,8 +53,6 @@ upload() {
   echo "$(curl -Ffile=@$1 https://0x0.st)"
 }
 
-alias ssh='kitten ssh'
-
 bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
 

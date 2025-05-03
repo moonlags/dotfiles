@@ -4,12 +4,13 @@
     origin = top-right
 
     width = 400
-    offset = 15x15
+    height = (0, 300)
+    offset = (10,35)
     
     progress_bar = true
     progress_bar_min_width = 380
     progress_bar_max_width = 380
-    progress_bar_corner_radius = 10
+    progress_bar_corner_radius = 0
 
     padding = 20
     horizontal_padding = 20

@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/bin/sh
 
 pkill polybar
-polybar
+polybar top &
+polybar bottom

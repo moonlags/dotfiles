@@ -2,9 +2,10 @@
 my random dotfiles
 
 ### packages
-```bash
-xbps-install greetd zsh polkit polkit-gnome xdg-desktop-portal xdg-desktop-portal-gtk elogind dbus dcron ufw NetworkManager network-manager-applet pipewire xorg xinit \
-i3 betterlockscreen kitty polybar picom rofi dunst udiskie freefont-ttf firefox neovim ripgrep fd fzf lf redshift maim xclip htop
+```sh
+xbps-install NetworkManager network-manager-applet dcron elogind greetd opendoas pipewire polkit polkit-gnome udiskie ufw xdg-desktop-portal xdg-desktop-portal-gtk xinit xorg zsh \
+betterlockscreen dunst firefox i3 kitty lf maim neovim pavucontrol picom playerctl polybar rofi xclip flavours \
+curl fd fzf ripgrep unzip wget xz
 ```
 
 ### Install with stow:
