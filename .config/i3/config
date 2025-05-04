@@ -15,11 +15,12 @@ exec --no-startup-id picom
 exec --no-startup-id dunst
 exec --no-startup-id nm-applet
 exec_always --no-startup-id setxkbmap us,ru -option 'grp:alt_shift_toggle,caps:ctrl_modifier'
-exec_always --no-startup-id ~/.config/polybar/launch.sh 
+exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 exec_always --no-startup-id gsettings set org.gnome.desktop.interface color-theme "prefer-dark"
 
 exec_always firefox
+assign [class="^Firefox$"] 2
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +1%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -1%
