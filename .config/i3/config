@@ -20,7 +20,6 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id gsettings set org.gnome.desktop.interface color-theme "prefer-dark"
 
 exec_always firefox
-assign [class="^Firefox$"] 2
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +1%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -1%
@@ -29,11 +28,11 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SIN
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
-focus_follows_mouse no
 
 # start a terminal
-bindsym $mod+q exec kitty
+bindsym $mod+q exec alacritty
 bindsym $mod+f exec firefox
+bindsym $mod+t exec kitty lf
 bindsym $mod+d exec rofi -show drun 
 bindsym $mod+p exec --no-startup-id maim -s | xclip -selection clipboard -t "image/png"
 bindsym $mod+x kill
@@ -98,6 +97,9 @@ default_border pixel 1
 default_floating_border normal
 gaps inner 10
 smart_gaps off
+
+assign [class="^Firefox$"] 2
+for_window [class="^pavucontrol$"] floating enable
 
 # target                 title    bg      text  indicator border
 client.focused          #000000 #000000 #000000 #4c566a   #a0a0a0

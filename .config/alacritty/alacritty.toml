@@ -1,0 +1,39 @@
+[window]
+padding = { x = 25, y = 25 }
+decorations = "None"
+
+[font]
+normal.family = "JetBrains Mono Nerd Font"
+size = 10.25
+
+[colors.primary]
+background = "0x101010"
+foreground = "0xf7f7f7"
+
+[colors.cursor]
+text = "CellBackground"
+cursor = "CellForeground"
+
+[colors.vi_mode_cursor]
+text = "CellBackground"
+cursor = "CellForeground"
+
+[colors.normal]
+black = "0x272727"
+red = "0x974b46"
+green = "0x5f8787"
+yellow = "0xeecc6c"
+blue = "0x5f81a5"
+magenta = "0xb48ead"
+cyan = "0xd0dfee"
+white = "0xe3e3e3"
+
+[colors.bright]
+black = "0x464646"
+red = "0x974b46"
+green = "0x5f8787"
+yellow = "0xeecc6c"
+blue = "0x5f81a5"
+magenta = "0xb48ead"
+cyan = "0xd0dfee"
+white = "0xf7f7f7"
