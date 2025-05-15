@@ -52,8 +52,8 @@ alias ls="ls --color"
 alias cat="bat"
 alias mkd="mkdir -pv"
 
-alias xi="sudo xbps-install"
-alias xr="sudo xbps-remove"
+alias xi="doas xbps-install"
+alias xr="doas xbps-remove"
 
 upload() {
   echo "$(curl -Ffile=@$1 https://0x0.st)"
