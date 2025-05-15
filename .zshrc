@@ -2,7 +2,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-PATH="$PATH:$(go env GOPATH)/bin"
+PATH="$PATH:$(go env GOPATH)/bin:~/.local/bin"
 
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
@@ -38,6 +38,8 @@ setopt hist_save_no_dups
 setopt hist_ignore_all_dups
 setopt sharehistory
 setopt appendhistory
+setopt autocd
+setopt interactive_comments
 
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
@@ -46,8 +48,12 @@ zstyle ':fzf-tab:complete:cd:*' fzf=preview 'ls --color $realpath'
 
 eval "$(fzf --zsh)"
 
-alias c='clear'
 alias ls="ls --color"
+alias cat="bat"
+alias mkd="mkdir -pv"
+
+alias xi="sudo xbps-install"
+alias xr="sudo xbps-remove"
 
 upload() {
   echo "$(curl -Ffile=@$1 https://0x0.st)"

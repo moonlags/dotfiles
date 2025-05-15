@@ -2,6 +2,9 @@ set $mod Mod4
 font pango:JetBrains Mono Nerd Font 10
 
 exec_always --no-startup-id pipewire
+exec_always --no-startup-id wireplumber
+exec_always --no-startup-id pipewire-pulse
+
 exec_always --no-startup-id /usr/libexec/xdg-desktop-portal -r
 exec_always --no-startup-id /usr/libexec/xdg-desktop-portal-gtk
 exec_always --no-startup-id /usr/libexec/polkit-gnome-authentication-agent-1
@@ -18,6 +21,8 @@ exec_always --no-startup-id setxkbmap us,ru -option 'grp:alt_shift_toggle,caps:c
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 exec_always --no-startup-id gsettings set org.gnome.desktop.interface color-theme "prefer-dark"
+
+exec_always --no-startup-id mpd
 
 exec_always firefox
 

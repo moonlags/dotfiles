@@ -1,6 +1,5 @@
 [window]
 padding = { x = 25, y = 25 }
-decorations = "None"
 
 [font]
 normal.family = "JetBrains Mono Nerd Font"
