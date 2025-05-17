@@ -2,8 +2,8 @@
 padding = { x = 25, y = 25 }
 
 [font]
-normal.family = "JetBrains Mono Nerd Font"
-size = 10.25
+normal.family = "JetBrainsMonoNLNerdFont"
+size = 10.0
 
 [colors.primary]
 background = "0x101010"

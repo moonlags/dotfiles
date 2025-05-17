@@ -11,7 +11,7 @@ if [ ! -d "$ZINIT_HOME" ];then
 	git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 fi
 
-export EDITOR=nvim
+export EDITOR="nvim"
 source "${ZINIT_HOME}/zinit.zsh"
 
 PROMPT_EOL_MARK=
@@ -51,6 +51,7 @@ eval "$(fzf --zsh)"
 alias ls="ls --color"
 alias cat="bat"
 alias mkd="mkdir -pv"
+alias ssh="TERM=linux ssh"
 
 alias xi="doas xbps-install"
 alias xr="doas xbps-remove"
