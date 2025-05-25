@@ -4,7 +4,6 @@ set ifs "\n"
 set scrolloff 10
 set period 1
 set hiddenfiles ".*:*.aux:*.log:*.bbl:*.bcf:*.blg:*.run.xml"
-set previewer '~/.config/lf/previewer'
 set autoquit true
 
 # use enter for shell commands
@@ -26,5 +25,5 @@ cmd rename %[ -e $1 ] && printf "file exists" || mv $f $1
 map r push :rename<space>
 
 
-set previewer ~/.config/lf/previewer
+set previewer "~/.config/lf/previewer"
 set drawbox

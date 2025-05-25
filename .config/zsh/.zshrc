@@ -1,18 +1,20 @@
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+if [[ -r "${XDG_CACHE_HOME}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 PATH="$PATH:$(go env GOPATH)/bin:~/.local/bin"
 
-ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+[ -d "$XDG_DATA_HOME"/mpd ] || mkdir -p "$XDG_DATA_HOME"/mpd
+[ -d "$XDG_STATE_HOME"/mpd ] || mkdir -p "$XDG_STATE_HOME"/mpd
+
+ZINIT_HOME="${XDG_DATA_HOME}/zinit/zinit.git"
 
 if [ ! -d "$ZINIT_HOME" ];then
 	mkdir -p "$(dirname $ZINIT_HOME)"
 	git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 fi
 
-export EDITOR="nvim"
-source "${ZINIT_HOME}/zinit.zsh"
+source "$ZINIT_HOME/zinit.zsh"
 
 PROMPT_EOL_MARK=
 
@@ -23,14 +25,18 @@ zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
 
-autoload -Uz compinit && compinit
+[ -d "$XDG_CACHE_HOME"/zsh ] || mkdir -p "$XDG_CACHE_HOME"/zsh
+zstyle ':completion:*' cache-path "$XDG_CACHE_HOME"/zsh/zcompcache
+autoload -Uz compinit && compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-$ZSH_VERSION
 
 zinit cdreplay -q
 
 HISTSIZE=5000
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
-HISTFILE=~/.zsh_history
+
+[ -d "$XDG_STATE_HOME"/zsh ] || mkdir -p "$XDG_STATE_HOME"/zsh
+HISTFILE="$XDG_STATE_HOME"/zsh/history
 
 setopt hist_find_no_dups
 setopt hist_ignore_dups
@@ -52,6 +58,7 @@ alias ls="ls --color"
 alias cat="bat"
 alias mkd="mkdir -pv"
 alias ssh="TERM=linux ssh"
+alias vim="nvim"
 
 alias xi="doas xbps-install"
 alias xr="doas xbps-remove"
@@ -63,4 +70,4 @@ upload() {
 bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
 
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[[ ! -f "$XDG_CONFIG_HOME"/zsh/.p10k.zsh ]] || source "$XDG_CONFIG_HOME"/zsh/.p10k.zsh
