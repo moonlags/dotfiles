@@ -99,7 +99,6 @@ bindsym $mod+Shift+c reload
 default_border pixel 0
 default_floating_border normal
 gaps inner 10
-gaps top 20
 smart_gaps off
 focus_follows_mouse no
 
