@@ -97,15 +97,10 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 bindsym $mod+Shift+c reload
 
 default_border pixel 0
-default_floating_border normal
+default_floating_border pixel 0
 gaps inner 10
 smart_gaps off
 focus_follows_mouse no
 
 assign [class="^Firefox$"] 2
 for_window [class="^pavucontrol$"] floating enable
-
-# target                 title    bg      text  indicator border
-client.focused          #000000 #000000 #000000 #4c566a   #a0a0a0
-client.focused_inactive #000000 #000000 #000000 #000000   #101010
-client.unfocused        #000000 #000000 #000000 #000000   #101010
