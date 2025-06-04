@@ -12,7 +12,7 @@ exec --no-startup-id xset b off
 
 exec_always --no-startup-id mpd
 exec --no-startup-id udiskie -ans
-exec_always --no-startup-id feh --no-fehbg --bg-scale "${XDG_CONFIG_HOME}/i3/wallpaper.jpg"
+exec_always --no-startup-id feh --no-fehbg --bg-scale "${XDG_CONFIG_HOME}/i3/wallpaper.png"
 exec --no-startup-id picom
 exec --no-startup-id dunst
 exec --no-startup-id nm-applet
@@ -38,7 +38,7 @@ bindsym $mod+t exec alacritty -e lf
 bindsym $mod+d exec --no-startup-id "${XDG_CONFIG_HOME}/i3/scripts/dmenu"
 bindsym $mod+p exec --no-startup-id maim -s | xclip -selection clipboard -t "image/png"
 bindsym $mod+x kill
-bindsym $mod+m exec --no-startup-id betterlockscreen -l
+bindsym $mod+m exec --no-startup-id i3lock -c 101010
 bindsym $mod+Shift+b exec --no-startup-id "${XDG_CONFIG_HOME}/polybar/launch.sh"
 bindsym $mod+o exec --no-startup-id mpc toggle
 
