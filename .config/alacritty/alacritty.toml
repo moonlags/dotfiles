@@ -2,7 +2,7 @@
 padding = { x = 25, y = 25 }
 
 [font]
-normal.family = "JetBrainsMonoNLNerdFont"
+normal.family = "CozetteVector"
 size = 10.0
 
 [colors.primary]

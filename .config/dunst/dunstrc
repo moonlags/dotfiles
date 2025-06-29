@@ -16,7 +16,7 @@
     horizontal_padding = 20
     frame_width = 0
     gap_size = 3
-    font = "JetBrainsMono Nerd 10"
+    font = "cozette 10"
 
     background = "#101010"
     foreground = "#f7f7f7"
