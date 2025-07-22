@@ -16,8 +16,7 @@ memory () {
 }
 
 keyboard_layout() {
-    layout=$(setxkbmap -query | grep layout | awk '{print $2}' | cut -d',' -f1)
-    echo "$layout"
+    echo "$(xkblayout-state print '%s')"
 }
 
 # Update the bar utilities every five seconds.

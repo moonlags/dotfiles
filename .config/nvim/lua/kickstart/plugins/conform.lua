@@ -24,7 +24,6 @@ return { -- Autoformat
       lua = { 'stylua' },
       go = { 'goimports', 'gofumpt' },
       c = { 'clang-format' },
-      zig = { 'zigfmt' },
     },
   },
 }

@@ -205,8 +205,15 @@ return {
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
         clangd = {},
-        gopls = {},
-        zls = {},
+        gopls = {
+          settings = {
+            gopls = {
+              hoverKind = 'SingleLine',
+              linksInHover = false,
+              staticcheck = true,
+            },
+          },
+        },
         -- pyright = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
@@ -255,9 +262,7 @@ return {
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
       require('mason-lspconfig').setup {
-        ensure_installed = {
-          'zls@0.13.0',
-        }, -- explicitly set to an empty table (Kickstart populates installs via mason-tool-installer)
+        ensure_installed = {}, -- explicitly set to an empty table (Kickstart populates installs via mason-tool-installer)
         automatic_installation = false,
         handlers = {
           function(server_name)

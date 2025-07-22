@@ -35,8 +35,8 @@ return { -- Collection of various small independent plugins/modules
     hues.setup {
       background = '#101010',
       foreground = '#f7f7f7',
-      n_hues = 8,
-      saturation = 'lowmedium',
+      n_hues = 4,
+      saturation = 'low',
     }
     -- ... and there is more!
     --  Check out: https://github.com/echasnovski/mini.nvim
