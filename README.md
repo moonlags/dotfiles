@@ -4,7 +4,7 @@ my random dotfiles
 ### packages
 ```sh
 xbps-install polkit xinit xsetroot setxkbmap xset xkblayout-state xorg-minimal bash-completion \
-dunst firefox spectrwm alacritty scrot neovim dmenu xclip \
+dunst firefox spectrwm alacritty scrot neovim dmenu xclip cmus pass passmenu \
 curl fd fzf ripgrep unzip wget xz font-cozette freefont-ttf gcc make
 ```
 

@@ -1,0 +1,3 @@
+#!/bin/sh
+
+passmenu -b -nb "#101010" -nf "#f7f7f7" -sb "#f7f7f7" -sf "#101010" -fn cozette
