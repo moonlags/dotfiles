@@ -15,7 +15,7 @@ rtp:prepend(lazypath)
 
 -- [[ Configure and install plugins ]]
 -- NOTE: Here is where you install your plugins.
-require('lazy').setup({
+require('lazy').setup {
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   {
     'NMAC427/guess-indent.nvim',
@@ -24,20 +24,14 @@ require('lazy').setup({
     end,
   },
 
-  require 'kickstart.plugins.gitsigns',
+  require 'kickstart.plugins.mini',
   require 'kickstart.plugins.which-key',
-  require 'kickstart.plugins.telescope',
+  require 'kickstart.plugins.lazydev',
   require 'kickstart.plugins.lsp',
   require 'kickstart.plugins.conform',
   require 'kickstart.plugins.blink',
-  require 'kickstart.plugins.mini',
   require 'kickstart.plugins.treesitter',
   require 'kickstart.plugins.debug',
   require 'kickstart.plugins.indent_line',
-  require 'kickstart.plugins.autopairs',
-  require 'kickstart.plugins.oil',
-}, {
-  ui = {
-    icons = {},
-  },
-})
+  { 'nvim-tree/nvim-web-devicons' },
+}

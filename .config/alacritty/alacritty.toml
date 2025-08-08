@@ -1,5 +1,5 @@
 [window]
-padding = { x = 25, y = 25 }
+padding = { x = 15, y = 15 }
 
 [font]
 normal.family = "CozetteVector"

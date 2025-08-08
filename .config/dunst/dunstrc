@@ -5,7 +5,7 @@
 
     width = 400
     height = (0, 300)
-    offset = (5,20)
+    offset = (5,30)
     
     progress_bar = true
     progress_bar_min_width = 380

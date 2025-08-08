@@ -31,13 +31,29 @@ return { -- Collection of various small independent plugins/modules
       return '%2l:%-2v'
     end
 
-    local hues = require 'mini.hues'
-    hues.setup {
+    require('mini.pairs').setup()
+    require('mini.extra').setup()
+    require('mini.diff').setup()
+
+    require('mini.hues').setup {
       background = '#101010',
       foreground = '#f7f7f7',
       n_hues = 4,
       saturation = 'low',
     }
+
+    require('mini.files').setup()
+    vim.keymap.set('n', '-', function()
+      MiniFiles.open()
+    end, { desc = 'Open parent directory' })
+
+    require('mini.pick').setup()
+    local builtin = MiniPick.builtin
+    vim.keymap.set('n', '<leader>sf', builtin.files, { desc = '[S]earch [F]iles' })
+    vim.keymap.set('n', '<leader>sg', builtin.grep_live, { desc = '[S]earch by [G]rep' })
+    vim.keymap.set('n', '<leader>sn', function()
+      builtin.files(nil, { source = { cwd = vim.fn.stdpath 'config' } })
+    end, { desc = '[S]earch [N]eovim files' })
     -- ... and there is more!
     --  Check out: https://github.com/echasnovski/mini.nvim
   end,

@@ -1,0 +1,23 @@
+PS1='\w$ '
+
+# History settings
+HISTCONTROL="ignoredups:ignorespace"
+HISTFILE="${HOME}/.local/state/ksh/history"
+[ -d "${HOME}/.local/state/ksh" ] || mkdir -p "${HOME}/.local/state/ksh"
+
+set -o emacs
+
+# Aliases
+alias ssh="TERM=linux ssh"
+
+# Upload function
+upload() {
+    if [ -z "$1" ]; then
+        echo "Usage: upload <file>"
+        return 1
+    fi
+    echo "$(curl -F file=@"$1" https://0x0.st)"
+}
+
+# PATH export
+export PATH="$PATH:/opt/compiler/glibc-oabi-toolchain-arm-generic/bin:$(go env GOPATH 2>/dev/null)/bin"
