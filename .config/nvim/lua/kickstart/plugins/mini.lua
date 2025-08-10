@@ -1,5 +1,8 @@
 return { -- Collection of various small independent plugins/modules
   'echasnovski/mini.nvim',
+  dependencies = {
+    'nvim-tree/nvim-web-devicons',
+  },
   config = function()
     -- Better Around/Inside textobjects
     --
@@ -54,7 +57,5 @@ return { -- Collection of various small independent plugins/modules
     vim.keymap.set('n', '<leader>sn', function()
       builtin.files(nil, { source = { cwd = vim.fn.stdpath 'config' } })
     end, { desc = '[S]earch [N]eovim files' })
-    -- ... and there is more!
-    --  Check out: https://github.com/echasnovski/mini.nvim
   end,
 }

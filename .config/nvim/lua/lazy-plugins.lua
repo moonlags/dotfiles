@@ -27,11 +27,10 @@ require('lazy').setup {
   require 'kickstart.plugins.mini',
   require 'kickstart.plugins.which-key',
   require 'kickstart.plugins.lazydev',
+  require 'kickstart.plugins.blink',
   require 'kickstart.plugins.lsp',
   require 'kickstart.plugins.conform',
-  require 'kickstart.plugins.blink',
   require 'kickstart.plugins.treesitter',
   require 'kickstart.plugins.debug',
   require 'kickstart.plugins.indent_line',
-  { 'nvim-tree/nvim-web-devicons' },
 }
