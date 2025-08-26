@@ -45,7 +45,9 @@ return { -- Collection of various small independent plugins/modules
       saturation = 'low',
     }
 
-    require('mini.files').setup()
+    require('mini.files').setup {
+      mappings = { synchronize = '-' },
+    }
     vim.keymap.set('n', '-', function()
       MiniFiles.open()
     end, { desc = 'Open parent directory' })
