@@ -45,11 +45,6 @@ return { -- Collection of various small independent plugins/modules
       saturation = 'low',
     }
 
-    require('mini.files').setup()
-    vim.keymap.set('n', '-', function()
-      MiniFiles.open()
-    end, { desc = 'Open parent directory' })
-
     require('mini.pick').setup()
     local builtin = MiniPick.builtin
     vim.keymap.set('n', '<leader>sf', builtin.files, { desc = '[S]earch [F]iles' })
