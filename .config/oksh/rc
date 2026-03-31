@@ -21,3 +21,4 @@ upload() {
 
 # PATH export
 export PATH="$PATH:/opt/compiler/glibc-oabi-toolchain-arm-generic/bin:$(go env GOPATH 2>/dev/null)/bin"
+export PATH="$PATH:$HOME/.local/bin"

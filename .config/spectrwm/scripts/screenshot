@@ -1,0 +1,13 @@
+#!/bin/sh
+
+cmd="$1"
+
+if [ -z "$cmd" ]; then
+	maim | xclip -selection clipboard -t image/png
+	exit $?
+fi
+
+if [ "$cmd" = "area" ]; then
+	maim -s | xclip -selection clipboard -t image/png
+	exit $?
+fi

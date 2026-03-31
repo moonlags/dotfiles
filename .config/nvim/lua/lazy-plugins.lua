@@ -23,7 +23,13 @@ require('lazy').setup {
       require('guess-indent').setup {}
     end,
   },
+  {
+    'JezerM/oil-lsp-diagnostics.nvim',
+    dependencies = { 'stevearc/oil.nvim' },
+    opts = {},
+  },
 
+  require 'kickstart.plugins.oil',
   require 'kickstart.plugins.mini',
   require 'kickstart.plugins.which-key',
   require 'kickstart.plugins.lazydev',
