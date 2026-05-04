@@ -18,3 +18,8 @@ vim.o.inccommand = 'nosplit'
 vim.o.autoindent = true
 vim.o.breakindent = true
 vim.o.expandtab = true
+vim.o.winborder = "single"
+
+vim.g.netrw_keepdir = 0
+vim.g.netrw_localcopydircmd = 'cp -r'
+vim.cmd('hi! link netrwMarkFile Search')
