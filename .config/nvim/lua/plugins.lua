@@ -6,8 +6,9 @@ vim.pack.add {
     'https://github.com/ibhagwan/fzf-lua',
     'https://github.com/windwp/nvim-autopairs',
     'https://github.com/lewis6991/gitsigns.nvim',
-    'https://github.com/romus204/tree-sitter-manager.nvim',
+    'https://github.com/nvim-treesitter/nvim-treesitter',
     { src = "https://github.com/saghen/blink.cmp", version = vim.version.range("^1") },
+    'https://github.com/mfussenegger/nvim-jdtls'
 }
 
 local statusline = require('mini.statusline')
@@ -49,6 +50,7 @@ require('fzf-lua').setup {
             ['ctrl-q'] = { fn = actions.file_sel_to_qf, prefix = "select-all+" }
         }
     },
+    { "telescope" }
 }
 
 require('nvim-autopairs').setup {}
@@ -65,17 +67,33 @@ require('blink.cmp').setup({
     sources = { default = { 'lsp', 'path' } },
 })
 
-require('tree-sitter-manager').setup({
-    ensure_installed = {
-        'go'
-    },
-    auto_install = true,
-    border = 'single'
-})
-
 require('mini.hues').setup {
     background = '#101010',
     foreground = '#f7f7f7',
     n_hues = 4,
     saturation = 'low',
 }
+
+local function treesitter_try_attach(buf, language)
+    if not vim.treesitter.language.add(language) then return end
+    vim.treesitter.start(buf, language)
+    local has_ident_query = vim.treesitter.query.get(language, 'indents') ~= nil
+    if has_ident_query then vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()" end
+end
+
+local available_parsers = require('nvim-treesitter').get_available()
+vim.api.nvim_create_autocmd('FileType', {
+    callback = function(args)
+        local buf, filetype = args.buf, args.match
+
+        local language = vim.treesitter.language.get_lang(filetype)
+        if not language then return end
+
+        local installed_parsers = require('nvim-treesitter').get_installed 'parsers'
+        if not vim.tbl_contains(installed_parsers, language) and vim.tbl_contains(available_parsers, language) then
+            require('nvim-treesitter').install(language)
+        end
+
+        treesitter_try_attach(buf, language)
+    end,
+})
