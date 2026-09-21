@@ -1,0 +1,22 @@
+[global]
+    monitor = 1
+
+    origin = top-right
+
+    width = 400
+    height = (0, 300)
+    offset = (5,30)
+    
+    progress_bar = true
+    progress_bar_min_width = 380
+    progress_bar_max_width = 380
+    progress_bar_corner_radius = 0
+
+    padding = 20
+    horizontal_padding = 20
+    frame_width = 0
+    gap_size = 3
+    font = "cozette 10"
+
+    background = "#0e0e16"
+    foreground = "#d8d8d8"
