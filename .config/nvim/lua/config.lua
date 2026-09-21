@@ -19,6 +19,7 @@ vim.o.autoindent = true
 vim.o.breakindent = true
 vim.o.expandtab = true
 vim.o.winborder = "single"
+vim.o.termguicolors = true
 
 vim.g.netrw_keepdir = 0
 vim.g.netrw_localcopydircmd = 'cp -r'

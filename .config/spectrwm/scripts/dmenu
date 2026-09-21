@@ -1,3 +1,3 @@
 #!/bin/sh
 
-dmenu_run -b -nb "#101010" -nf "#f7f7f7" -sb "#f7f7f7" -sf "#101010" -fn cozette
+dmenu_run -b -nb "#0e0e16" -nf "#d8d8d8" -sb "#d8d8d8" -sf "#0e0e16" -fn cozette
