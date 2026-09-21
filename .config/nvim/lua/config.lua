@@ -18,6 +18,7 @@ vim.o.autoindent = true
 vim.o.breakindent = true
 vim.o.expandtab = true
 vim.o.winborder = "single"
+vim.o.termguicolors = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
 

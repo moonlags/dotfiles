@@ -13,6 +13,10 @@
       "rev": "6d808f99bd63303646794406e270bd553ad7792e",
       "src": "https://github.com/lewis6991/gitsigns.nvim"
     },
+    "lake-dweller.nvim": {
+      "rev": "c2e1152dc5f463e9acf9d11dc100ac99ceecd3cc",
+      "src": "https://github.com/yonatanperel/lake-dweller.nvim"
+    },
     "mason.nvim": {
       "rev": "12ddd182d9efbdc848b540f16484a583d52da0fb",
       "src": "https://github.com/mason-org/mason.nvim"
@@ -24,6 +28,10 @@
     "mini.statusline": {
       "rev": "b456bfe845e475e9cec065b7a9a1ef657ad2f41b",
       "src": "https://github.com/nvim-mini/mini.statusline"
+    },
+    "mini.surround": {
+      "rev": "2715e04bea3ec9244f15b421dc5b18c0fe326210",
+      "src": "https://github.com/nvim-mini/mini.surround"
     },
     "nvim-autopairs": {
       "rev": "59bce2eef357189c3305e25bc6dd2d138c1683f5",
