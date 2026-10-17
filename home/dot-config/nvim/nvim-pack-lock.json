@@ -49,6 +49,14 @@
       "rev": "c72328a5494b4502947a022fe69c0c47e53b6aa6",
       "src": "https://github.com/nvim-tree/nvim-web-devicons"
     },
+    "org-modern.nvim": {
+      "rev": "c024900b7ee78a0274036025569b47001ef3e6aa",
+      "src": "https://github.com/danilshvalov/org-modern.nvim"
+    },
+    "orgmode": {
+      "rev": "78c9928c151ff6ec07fd72da74bdf50a8034f0a5",
+      "src": "https://github.com/nvim-orgmode/orgmode"
+    },
     "tree-sitter-manager.nvim": {
       "rev": "33a94d022e3a5a500d878b784ba7fec61559c70a",
       "src": "https://github.com/romus204/tree-sitter-manager.nvim"

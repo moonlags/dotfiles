@@ -3,9 +3,7 @@ my random dotfiles
 
 ### packages
 ```sh
-xbps-install base-devel polkit xinit xsetroot setxkbmap xset xkblayout-state xorg-minimal oksh \
-firefox spectrwm alacritty maim neovim dmenu xclip pass cmus cmus-pulseaudio \
-curl fd ripgrep freefont-ttf xdg-utils
+apt install build-essential dunst fzf git extrepo maim xclip pipewire-pulse wireplumber refind spectrwm stow unzip x11-xserver-utils xinit alacritty cmus elogind suckless-tools x11-xkb-utils xserver-xorg-core
 ```
 
 ### Install with stow:

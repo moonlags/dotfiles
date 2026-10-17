@@ -5,10 +5,6 @@ volume () {
   echo "vol ${vol}"
 }
 
-keyboard_layout() {
-    echo "$(xkblayout-state print '%s')"
-}
-
 cpu_usage() {
   usage=$(vmstat 1 2 | tail -1 | awk '{print 100 - $15}')
   echo "cpu ${usage}%"
@@ -21,6 +17,6 @@ mem_usage() {
 
 # Update the bar utilities every five seconds.
 while :; do
-  echo "$(keyboard_layout)  ∙  $(volume)  ∙  $(cpu_usage)  ∙  $(mem_usage) "
-  sleep 5
+  echo "$(volume)  ∙  $(cpu_usage)  ∙  $(mem_usage) "
+  sleep 1
 done

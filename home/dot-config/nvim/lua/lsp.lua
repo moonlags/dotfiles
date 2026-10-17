@@ -1,7 +1,7 @@
 vim.lsp.enable {
   'lua_ls',
   'gopls',
-  'jdtls'
+  'org'
 }
 
 vim.diagnostic.config { virtual_text = true }

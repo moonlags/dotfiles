@@ -1,11 +1,17 @@
+#!/bin/sh
 pipewire &
+pipewire-pulse &
+wireplumber &
 
 kdeconnectd &
 
 xinput set-prop "9" "libinput Accel Profile Enabled" 0 1 0
 xset b off
 setxkbmap us,ru -option 'grp:alt_shift_toggle,caps:ctrl_modifier'
-
 xsetroot -solid "#858d95"
+
+pgrep -x syncthing >/dev/null || \
+  syncthing serve --no-browser --no-restart --logflags=0 \
+  >"$HOME/.local/state/syncthing.log" 2>&1 &
 
 exec dbus-run-session -- spectrwm

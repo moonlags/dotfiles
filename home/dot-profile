@@ -1,0 +1,12 @@
+export PATH="$PATH:/sbin:$HOME/.local/bin:$HOME/go/bin"
+
+export EDITOR=nvim
+export VISUAL=nvim
+
+if [ -n "$BASH_VERSION" ] && [ -f "$HOME/.bashrc" ]; then
+    . "$HOME/.bashrc"
+fi
+
+if [ -z "$DISPLAY" ] && [ "$(tty)" = /dev/tty1 ]; then
+    exec startx
+fi
