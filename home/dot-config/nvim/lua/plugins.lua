@@ -1,26 +1,14 @@
 vim.pack.add {
-    'https://github.com/nvim-tree/nvim-web-devicons',
     'https://github.com/mason-org/mason.nvim',
-    'https://github.com/nvim-mini/mini.statusline',
-    'https://github.com/nvim-mini/mini.surround',
-    'https://github.com/nvim-mini/mini.hues',
     'https://github.com/ibhagwan/fzf-lua',
     'https://github.com/windwp/nvim-autopairs',
-    'https://github.com/lewis6991/gitsigns.nvim',
     'https://github.com/yonatanperel/lake-dweller.nvim',
     'https://github.com/nvim-treesitter/nvim-treesitter',
     { src = "https://github.com/saghen/blink.cmp", version = vim.version.range("^1") },
-    'https://github.com/nvim-orgmode/orgmode',
-    'https://github.com/danilshvalov/org-modern.nvim'
 }
 
-local statusline = require('mini.statusline')
-statusline.setup { use_icons = true }
-statusline.section_location = function()
-    return '%2l:%-2v'
-end
+vim.cmd.colorscheme("lake-dweller")
 
-require('mini.surround').setup()
 require('mason').setup()
 
 local actions = require 'fzf-lua.actions'
@@ -58,7 +46,6 @@ require('fzf-lua').setup {
 }
 
 require('nvim-autopairs').setup {}
-require('gitsigns').setup {}
 
 require('blink.cmp').setup({
     fuzzy = { implementation = 'prefer_rust_with_warning' },
@@ -67,31 +54,13 @@ require('blink.cmp').setup({
     appearance = { nerd_font_variant = 'normal', },
     completion = {
         documentation = { auto_show = false, auto_show_delay_ms = 500 },
-    },
-    sources = {
-        default = { 'lsp', 'path' },
-        per_filetype = {
-            org = { 'orgmode' }
-        },
-        providers = {
-            orgmode = {
-                name = 'Orgmode',
-                module = 'orgmode.org.autocompletion.blink',
-                fallbacks = { 'buffer' },
-            },
-        },
     }
 })
 
 require("lake-dweller").setup({
     variant = "lake-dweller",
 })
-vim.cmd.colorscheme "lake-dweller"
-
-local set_hl = vim.api.nvim_set_hl
-set_hl(0, 'GitSignsAdd', { fg = '#8ac490', bg = 'NONE' })
-set_hl(0, 'GitSignsChange', { fg = '#b0c0e0', bg = 'NONE' })
-set_hl(0, 'GitSignsDelete', { fg = '#ef8a90', bg = 'NONE' })
+-- vim.cmd.colorscheme "lake-dweller"
 
 local function treesitter_try_attach(buf, language)
     if not vim.treesitter.language.add(language) then return end
@@ -115,9 +84,4 @@ vim.api.nvim_create_autocmd('FileType', {
 
         treesitter_try_attach(buf, language)
     end,
-})
-
-require('orgmode').setup({
-    org_agenda_files = '~/org/**/*',
-    org_default_notes_file = '~/org/inbox.org',
 })

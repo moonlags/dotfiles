@@ -16,7 +16,7 @@
     horizontal_padding = 20
     frame_width = 0
     gap_size = 3
-    font = "cozette 10"
+    font = "GoMonoNerdFont 11"
 
     background = "#0e0e16"
     foreground = "#d8d8d8"
